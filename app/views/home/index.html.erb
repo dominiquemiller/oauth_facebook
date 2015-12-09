@@ -1,0 +1,28 @@
+
+<h1>Oauth Test Case Example<h1>
+
+<!--
+  Below we include the Login Button social plugin. This button uses
+  the JavaScript SDK to present a graphical Login button that triggers
+  the FB.login() function when clicked.
+-->
+
+<fb:login-button
+  scope="public_profile, email, user_friends"
+  onlogin="checkLoginState();"
+  data-auto-logout-link="true"
+  >
+</fb:login-button>
+
+
+<div id="status">
+</div>
+<div
+  class="fb-like"
+  data-share="true"
+  data-width="450"
+  data-show-faces="true">
+</div>
+
+<%= link_to "Token transfer", facebook_token_path, id: 'token-transfer-link' %>
+<%= link_to "Real Login", facebook_token_path, id: 'login-link' %>
